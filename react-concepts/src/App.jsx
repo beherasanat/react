@@ -4,12 +4,22 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import FunctionalComponent from "./concepts/FunctionalComponent.jsx";
 import ClassComponent from "./concepts/ClassComponent.jsx";
+import {ChildProps} from "./concepts/ChildProps.jsx";
+import ChildState from "./concepts/ChildState.jsx";
+import {EventHandlingTest} from "./concepts/EventHandlingTest.jsx";
+import {ShowSeason} from "./concepts/RenderListUsingMap.jsx";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const user = {name:"Sanat", age: 30};
+  const message = "Welcome to the React App!";
+  const seasons = ["Summer", "Rainy", "Winter"];
   return (
       <>
+        <ChildProps message={message} user={user} />
+        <ChildState message={message} user={user} />
+          <EventHandlingTest />
+          <ShowSeason seasons={seasons}/>
         <FunctionalComponent></FunctionalComponent>
         <ClassComponent></ClassComponent>
       </>
