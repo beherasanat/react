@@ -8,15 +8,17 @@ import {ChildProps} from "./concepts/ChildProps.jsx";
 import ChildState from "./concepts/ChildState.jsx";
 import {EventHandlingTest} from "./concepts/EventHandlingTest.jsx";
 import {ShowSeason} from "./concepts/RenderListUsingMap.jsx";
+import {RouterTest} from "./concepts/RouterTest.jsx";
 
 
 function App() {
   const user = {name:"Sanat", age: 30};
   const message = "Welcome to the React App!";
-  const seasons = ["Summer", "Rainy", "Winter"];
+  const seasons= ["Summer", "Rainy", "Winter"];
   return (
       <>
         <ChildProps message={message} user={user} />
+          <RouterTest></RouterTest>
         <ChildState message={message} user={user} />
           <EventHandlingTest />
           <ShowSeason seasons={seasons}/>
